@@ -1,27 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="osf-dev"
-	  fetch="https://github.com/OpenSourceFoundries"/>
-
-  <default remote="osf-dev"
-           revision="osf-17.10"
-	   sync-j="4"/>
-
-  <project name="zephyr"/>
-  <project name="mcuboot"/>
-  <project name="mbedtls"
-	    revision="f2a597fa3dd1c7b15e0fee62f6932b253295803d"
-	    path="mcuboot/sim/mcuboot-sys/mbedtls" />
-
-  <project name="zephyr-fota-samples"/>
-  <project name="zmp-build"
-	   path="build">
-        <!-- TODO: rename the file itself as part of the cut over to osf-17.10 -->
-	<linkfile src="genesis.py" dest="zmp"/>
+  <remote fetch="https://github.com/OpenSourceFoundries" name="OpenSourceFoundries" />
+  
+  <default remote="OpenSourceFoundries" revision="osf-17.10" sync-j="4" />
+  
+  <project name="mbedtls" path="mcuboot/sim/mcuboot-sys/mbedtls" revision="f2a597fa3dd1c7b15e0fee62f6932b253295803d" />
+  <project name="mcuboot" revision="000fb208773ecdfceb48fe0ca203e3a64e8fa0bc" upstream="osf-17.10" />
+  <project name="zephyr" revision="23245f0d46686abf9400c851c62d169f87675617" upstream="osf-17.10" />
+  <project name="zephyr-fota-samples" revision="df7173af15f1ea58dcaa5e667b0e2b83398ee934" upstream="osf-17.10" />
+  <project name="zmp-build" path="build" revision="f7a3fb202abdc99bfa1b6bd1deb6a204f4583499" upstream="osf-17.10">
+    <linkfile dest="zmp" src="genesis.py" />
   </project>
-  <project name="zmp-container"
-	   path="build/other/zmp-container"/>
-  <project name="zmp-prebuilt"
-	   clone-depth="1"
-	   path="build/other/zmp-prebuilt"/>
+  <project name="zmp-container" path="build/other/zmp-container" revision="7c5de6bb1b15c91dba870c4032e7a3cea3ee8ef4" upstream="osf-17.10" />
+  <project clone-depth="1" name="zmp-prebuilt" path="build/other/zmp-prebuilt" revision="ad7fd50ba7ca2a8bf84afcdb510a6bd97e1cb0f4" upstream="osf-17.10" />
 </manifest>
