@@ -11,6 +11,7 @@
 
   <project name="ble-mesh" revision="master" remote="oslight" path="oslight-samples/ble-mesh" />
   <project name="lwm2m-light" revision="master" remote="oslight" path="oslight-samples/lwm2m-light" />
+  <project name="scripts" revision="master" remote="oslight" path="scripts" />
 
    <project name="zmp-build" path="build" revision="f7a3fb202abdc99bfa1b6bd1deb6a204f4583499" upstream="osf-17.10">
     <linkfile dest="zmp" src="genesis.py" />
